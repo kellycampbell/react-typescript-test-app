@@ -1,0 +1,3 @@
+
+default: 
+	webpack --watch

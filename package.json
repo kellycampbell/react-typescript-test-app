@@ -1,0 +1,19 @@
+{
+  "name": "webpack-typescript-test-app",
+  "version": "1.0.0",
+  "description": "Following directions from:",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "ts-loader": "^0.5.6"
+  }
+}
