@@ -3,8 +3,9 @@ var greeter = require('./greeter');
 var $ = require('jquery');
 
 $(() => {
-  $(document.body).html(greeter("Kelly"));
-  console.log('typescript yay!')
+  // $(document.body).html(greeter("Kelly"));
+  greeter("Kelly");
+  // console.log('typescript yay!')
 });
 
 if (module.hot) {

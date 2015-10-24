@@ -2,10 +2,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "sourceMap": true,
+    "jsx": "react",
     "outDir": "build"
   },
   "files": [
-    "index.ts",
     "typings/tsd.d.ts"
   ]
 }

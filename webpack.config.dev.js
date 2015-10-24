@@ -16,22 +16,21 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
-  // entry: './app.ts',
-  // output: {
-  //   path: 'build',
-  //   filename: 'bundle.js'
-  // },
-  // devtool: 'source-map',
   devtool: 'cheap-module-eval-source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.tsx', '.jsx']
   },
-  // plugins: [
-  //   new webpack.optimize.UglifyJsPlugin()
-  // ],
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'awesome-typescript-loader' }
+      // { test: /\.ts$/, 
+      //   loader: 'awesome-typescript-loader',
+      //   exclude: /(node_modules|bower_components)/,
+      // },
+      { test: /\.tsx?$/, 
+        // loaders: ['react-hot', 'babel-loader', 'awesome-typescript-loader',],
+        loaders: ['react-hot', 'babel-loader', 'ts-loader',],
+        exclude: /(node_modules|bower_components)/,
+      }
     ]
   }
 }
