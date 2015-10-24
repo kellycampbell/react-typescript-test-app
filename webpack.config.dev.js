@@ -22,12 +22,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      // { test: /\.ts$/, 
-      //   loader: 'awesome-typescript-loader',
-      //   exclude: /(node_modules|bower_components)/,
-      // },
       { test: /\.tsx?$/, 
-        // loaders: ['react-hot', 'babel-loader', 'awesome-typescript-loader',],
         loaders: ['react-hot', 'babel-loader', 'ts-loader',],
         exclude: /(node_modules|bower_components)/,
       }
