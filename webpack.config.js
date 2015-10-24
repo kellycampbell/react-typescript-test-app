@@ -1,20 +1,37 @@
+var path = require('path');
 var webpack = require('webpack');  
+
 module.exports = {
-  entry: './app.ts',
+  entry: [
+    'webpack-hot-middleware/client',
+    './index.js'
+  ],
   output: {
-    path: 'build',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/build/'
   },
-  devtool: 'source-map',
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
+  // entry: './app.ts',
+  // output: {
+  //   path: 'build',
+  //   filename: 'bundle.js'
+  // },
+  // devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin()
-  ],
+  // plugins: [
+  //   new webpack.optimize.UglifyJsPlugin()
+  // ],
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+      { test: /\.ts$/, loader: 'awesome-typescript-loader' }
     ]
   }
 }

@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "awesome-typescript-loader": "^0.14.0",
+    "express": "^4.13.3",
     "typescript": "^1.6.2",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.4.1"
   },
   "dependencies": {
     "jquery": "^2.1.4",

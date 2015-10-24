@@ -5,7 +5,7 @@
     "outDir": "build"
   },
   "files": [
-    "app.ts",
+    "index.ts",
     "typings/tsd.d.ts"
   ]
 }
