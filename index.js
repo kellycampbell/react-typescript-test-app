@@ -1,8 +1,8 @@
 var $ = require('jquery');
-var greeter = require('./src/greeter');
+var main = require('./src/main');
 
 $(() => {
-  greeter();
+  main();
 });
 
 // This lets us do awesome hot loading stuff

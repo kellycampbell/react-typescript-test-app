@@ -11,6 +11,11 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler, { reload: true } ));
 
 app.use(function(req, res) {
+  // try {
+  //   compiler.compile();
+  // } catch (e) {
+  //   console.log(e);
+  // }
   res.sendFile(__dirname + '/index.html');
 });
 

@@ -16,7 +16,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.js', '.tsx', '.jsx']
   },
