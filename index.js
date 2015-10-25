@@ -1,16 +1,11 @@
-
-var greeter = require('./greeter');  
 var $ = require('jquery');
+var greeter = require('./src/greeter');
 
 $(() => {
-  // $(document.body).html(greeter("Kelly"));
-  greeter("Kelly");
-  // console.log('typescript yay!')
+  greeter();
 });
 
+// This lets us do awesome hot loading stuff
 if (module.hot) {
   module.hot.accept();
-  // module.hot.dispose(function() {
-  //   clearInterval(timer);
-  // });
 }

@@ -5,4 +5,4 @@ run-server:
 setup:
 	npm install
 	tsd install
-
+	tsd link
